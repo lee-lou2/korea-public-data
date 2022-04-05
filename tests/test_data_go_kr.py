@@ -61,13 +61,15 @@ def test_request_business_man():
         controller = PublicDataController(app_name).set_keys(
             service_key=service_key
         )
-        assert controller.data.get("request_cnt") == 1
-        assert controller.data.get("data")[0].get("b_no") == "1208147521"
+        res = controller.data
+        assert res.get("request_cnt") == 1
+        assert res.get("data")[0].get("b_no") == "1208147521"
 
         # 변경된 사업자 조회
         controller.business_no = ["2208162517"]
-        assert controller.data.get("request_cnt") == 1
-        assert controller.data.get("data")[0].get("b_no") == "2208162517"
+        res = controller.data
+        assert res.get("request_cnt") == 1
+        assert res.get("data")[0].get("b_no") == "2208162517"
 
 
 def test_station_by_route():
@@ -81,3 +83,16 @@ def test_station_by_route():
             service_key=service_key
         )
         assert isinstance(controller.data, OrderedDict)
+
+
+def test_so_city_stats():
+    """지역별 성범죄자 통계 API"""
+    # 앱 실행
+    app_name = 'sOCityStats'
+    controller = PublicDataController(app_name).set_keys()
+    res = controller.data
+
+    assert isinstance(res, OrderedDict)
+    assert res.get("Result").get("Code") == "00"
+
+
