@@ -1,0 +1,19 @@
+# 가상 환경
+../venv/
+
+# 파이썬 기본
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+.idea
+.pytest_cache
+
+# 환경 설정
+.env
+.env.*
+
+# Pypi 파일
+build/
+dist/
+korea_public_data.egg-info/
