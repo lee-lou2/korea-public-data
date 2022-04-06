@@ -1,6 +1,5 @@
 certifi==2021.10.8
 charset-normalizer==2.0.12
-hangul-utils==0.2
 idna==3.3
 pytz==2022.1
 requests==2.27.1

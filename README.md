@@ -45,6 +45,7 @@ controller.data  # 원하는 지역, 일자 데이터 조회
 | 현재 환율 API                     |exchangeJSON| **auth_key(str)**, search_date(str: YYYYMMDD)                                                                                |                                                     |
 | 지역별 성범죄자 통계|sOCityStats| -                                                                                                                            |                                                     |
 | 일별 박스 오피스 순위|searchDailyBoxOfficeList| **key(str)**, target_dt(str: YYYYMMDD), item_per_page(str), multi_movie_yn(Y or N), rep_nation_cd(K or F), wide_area_cd(str) |
+| 대기 오염 상태 조회|getMinuDustWeekFrcstDspth|**service_key(str)**, search_date(str: YYYY-MM-DD), page_no(int), num_of_rows(int)|
 
 *변수 중 **굵게** 표시된 부분은 Controller 생성시 사용되는 파라미터입니다*
 
@@ -74,6 +75,10 @@ Python 3.7 이상
   * 기능 추가(지역별 성범죄자 통계 및 일별 박스 오피스 등)
   * 불필요한 코드 제거
   * 클래스 참조 방식 변경
+
+* 0.0.5
+  * 기능 추가(대기 오염 상태 조회)
+  * 추가 설치된 라이브러리 기능 내부에 추가
 
 ## Thank You
 

@@ -15,7 +15,9 @@ def create_app_and_status_check(app_name, service_key, **kwargs):
         assert isinstance(controller.data, OrderedDict)
         assert res.get('response').get('header').get('resultCode') in ['00', '99']
         assert res.get('response').get('header').get('resultMsg') in [
-            'NORMAL SERVICE.', 'SERVICE KEY IS NOT REGISTERED ERROR.'
+            'NORMAL SERVICE.',
+            'SERVICE KEY IS NOT REGISTERED ERROR.',
+            'NORMAL_CODE'
         ]
 
         return res
@@ -96,3 +98,9 @@ def test_so_city_stats():
     assert res.get("Result").get("Code") == "00"
 
 
+def test_dust_week_frcst_dspth():
+    """대기 오염 정보 API"""
+    # 앱 실행
+    service_key = environ.get("DATA_GO_KR_SERVICE_KEY")
+    app_name = 'getMinuDustWeekFrcstDspth'
+    res = create_app_and_status_check(app_name, service_key)

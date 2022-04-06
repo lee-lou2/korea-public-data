@@ -6,3 +6,4 @@ STATION_BY_ROUTE_URL = "http://ws.bus.go.kr/api/rest/busRouteInfo/getStaionByRou
 BANKING_EXCHANGE_URL = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON?"
 SO_CITY_STATS_URL = "http://116.67.77.182/openapi/SOCitysStats?"
 SEARCH_DAILY_BOX_OFFICE_LIST_URL = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?"
+MINU_DUST_WEEK_FRCST_DSPTH_URL = "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustWeekFrcstDspth?"

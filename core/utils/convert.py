@@ -1,6 +1,5 @@
 import re
-from hangul_utils import split_syllables
-from korea_public_data.core.consts.util import KOR_ENG_TABLE
+from .hangul_utils import split_syllables, KOR_ENG_TABLE
 
 
 def dict_to_str(data: dict) -> str:
