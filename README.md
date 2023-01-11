@@ -91,4 +91,4 @@ Python 3.7 이상
 
 ## Contact
 
-JAY | root@ja-y.com
+JAKE | lee@lou2.kr
